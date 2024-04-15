@@ -11,7 +11,7 @@ public class ShopItemUI : MonoBehaviour
     [SerializeField] TMP_Text itemCostTxt;
     [SerializeField] GameObject starIcon,coinIcon;
     
-    public void LoadItemUI(ShopItemSO shopItem)
+    public void LoadItemUIData(ShopItemSO shopItem)//Set all correct data in the UI Elements such as text and icons
     {
         itemNameTxt.text = shopItem.ItemName;
         if(shopItem.ItemIcon!=null)itemImage.sprite = shopItem.ItemIcon;

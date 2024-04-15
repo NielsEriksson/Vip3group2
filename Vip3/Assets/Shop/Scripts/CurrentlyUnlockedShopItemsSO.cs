@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CurrentShopItems", menuName = "CurrentShopItem")]
-public class CurrentShopItemsSO : ScriptableObject
+public class CurrentlyUnlockedShopItemsSO : ScriptableObject
 {
-   public List<ShopItemSO> items;
+   public List<ShopItemSO> items; //A list of all currently unlocked Upgrade
 }
