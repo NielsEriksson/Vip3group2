@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public enum Seasson
-{
-    Spring,Summer,Fall,Winter
-}
+
 
 public class TileRule : MonoBehaviour
 {
-    public Tilemap tilemap;    
+    public Tilemap tilemap;
     public List<RuleTile> ruleTiles = new List<RuleTile>();
-    public Seasson season;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,27 +18,29 @@ public class TileRule : MonoBehaviour
     void Update()
     {
         //if (Input.GetKeyDown(KeyCode.Space))
-            foreach (Vector3Int pos in tilemap.cellBounds.allPositionsWithin)
+        foreach (Vector3Int pos in tilemap.cellBounds.allPositionsWithin)
+        {
+            if (tilemap.GetTile(pos) != null)
             {
-                if (tilemap.GetTile(pos) != null)
+                switch (SpriteChangeManager.Instance.spriteState)
                 {
-                    switch (season)
-                    {
-                        case Seasson.Spring:
-                            tilemap.SetTile(pos, ruleTiles[0]);
-                            break;
-                        case Seasson.Summer:
-                            tilemap.SetTile(pos, ruleTiles[1]);
-                            break;
-                        case Seasson.Fall:
-                            break;
-                        case Seasson.Winter:
-                            break;
-                        default:
-                            break;
-                    }
+                    case SpriteState.Bright:
+                        tilemap.SetTile(pos, ruleTiles[0]);
+                        break;
+                    case SpriteState.Dark:
+                        tilemap.SetTile(pos, ruleTiles[1]);
+                        break;
+                    case SpriteState.Night:
+                        tilemap.SetTile(pos, ruleTiles[2]);
+                        break;
+                    case SpriteState.Spooky:
+                        tilemap.SetTile(pos, ruleTiles[3]);
+                        break;
+                    default:
+                        break;
                 }
             }
+        }
 
 
         //tilemap.RefreshAllTiles();
