@@ -6,16 +6,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
-
-    //Inputs
-    private PlayerInputActions playerInputActions;
-    private InputAction move;
-    private InputAction jump;
-
     //Movement
     private Rigidbody2D rb;
     private Vector2 moveDirection;
-
     [SerializeField] float moveSpeed;
 
     //Jump
@@ -23,48 +16,33 @@ public class PlayerMovement : MonoBehaviour
     public bool hasDoubleJump;
 
     //Groundcheck
-    private bool collDown;
+    private bool collDown; //is colliding to something under the player
     private CapsuleCollider2D capsuleCollider; //player collider
-    [SerializeField] private LayerMask collidable;
+    [SerializeField] private LayerMask collidable; //which layers are collidable
     [SerializeField] private float collisionDetectionLength; //How far to check for collision
 
-    //upgrades
-    private UpgradeManager upgradeManager;
+    //crouch
+    private Vector3 baseScale;
 
-    private void Awake()
-    {
-        playerInputActions = new PlayerInputActions();
-    }
+    //references
+    private UpgradeManager upgradeManager; //to read what has been unlocked
+    private PlayerControls playerControls; //to read player inputs
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         upgradeManager = GetComponent<UpgradeManager>();
+        playerControls = GetComponent<PlayerControls>();
+        baseScale = transform.localScale;
     }
 
-    private void OnEnable()
-    {
-        move = playerInputActions.Player.Move;
-        move.Enable();
 
-        jump = playerInputActions.Player.Jump;
-        jump.Enable();
-        jump.performed += Jump;
-    }
-
-    private void OnDisable()
-    {
-        move = move = playerInputActions.Player.Move;
-        move.Disable();
-        jump = playerInputActions.Player.Jump;
-        jump.Disable();
-        jump.performed -= Jump;
-    }
 
     private void Update()
     {
-        moveDirection = move.ReadValue<Vector2>();
+        moveDirection = playerControls.MoveDirection;
         GroundCheck();
     }
 
@@ -76,13 +54,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        if (upgradeManager.Left)
+        if (upgradeManager.Left) // if player has unlocked left movement allow left movement otherwise only move right
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
         else if (moveDirection.x >= 0)
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
     }
 
     #region GroundCheck
+    //Check if player is touching the ground
     private void GroundCheck()
     {
         collDown = Physics2D.CapsuleCast(transform.position + (Vector3)capsuleCollider.offset, capsuleCollider.size, capsuleCollider.direction, 0, Vector2.down, collisionDetectionLength, collidable).collider != null;
@@ -95,13 +74,13 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Jump
-    private void Jump(InputAction.CallbackContext context)
+    public void Jump()
     {
-        if (collDown && upgradeManager.Jump)
+        if (collDown && upgradeManager.Jump) //jump if unlocked
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-        else if (!collDown && hasDoubleJump && upgradeManager.DoubleJump)
+        else if (!collDown && hasDoubleJump && upgradeManager.DoubleJump) //perform second jump if double jump unlocked & is in the iar
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             hasDoubleJump = false;
@@ -113,13 +92,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Crouch()
     {
-        if (!upgradeManager.Crouch)
+        if (!upgradeManager.Crouch) //crouch if unlocked
             return;
 
-        if (moveDirection.y < 0)
-            transform.localScale = new Vector3(1, 1, 1);
+        if (moveDirection.y < 0) // half player scale if pressing down otherwise set it to normal
+            transform.localScale = new Vector3(baseScale.x/2,baseScale.y/2, baseScale.z);
         else
-            transform.localScale = new Vector3(2, 2, 1);
+            transform.localScale = baseScale;
     }
     #endregion
 
