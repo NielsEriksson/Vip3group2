@@ -252,13 +252,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PixelManPlant_0
+      name: bigNight2
       rect:
         serializedVersion: 2
         x: 11
         y: 175
-        width: 23
-        height: 27
+        width: 24
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,13 +273,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_1
+      name: bigSpooky
       rect:
         serializedVersion: 2
         x: 53
         y: 175
         width: 27
-        height: 27
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,13 +294,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_2
+      name: medSpooky
       rect:
         serializedVersion: 2
         x: 85
         y: 175
         width: 22
-        height: 24
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,13 +315,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_3
+      name: smallTreeSpooky
       rect:
         serializedVersion: 2
         x: 113
         y: 175
         width: 23
-        height: 27
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,13 +336,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_4
+      name: pumpkinSpooky
       rect:
         serializedVersion: 2
         x: 145
         y: 175
         width: 13
-        height: 13
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,7 +363,7 @@ TextureImporter:
         x: 168
         y: 175
         width: 9
-        height: 7
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,7 +384,7 @@ TextureImporter:
         x: 181
         y: 175
         width: 8
-        height: 13
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,7 +405,7 @@ TextureImporter:
         x: 192
         y: 175
         width: 6
-        height: 13
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,13 +420,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_8
+      name: pineNight
       rect:
         serializedVersion: 2
         x: 9
         y: 133
         width: 13
-        height: 20
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,7 +447,7 @@ TextureImporter:
         x: 29
         y: 133
         width: 14
-        height: 22
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,13 +462,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_10
+      name: pomeNight
       rect:
         serializedVersion: 2
         x: 51
         y: 133
         width: 15
-        height: 21
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,13 +483,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_11
+      name: medNight
       rect:
         serializedVersion: 2
         x: 73
         y: 133
         width: 15
-        height: 20
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,13 +504,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_12
+      name: longNight
       rect:
         serializedVersion: 2
         x: 93
         y: 133
         width: 13
-        height: 21
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -531,7 +531,7 @@ TextureImporter:
         x: 112
         y: 133
         width: 4
-        height: 9
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -552,7 +552,7 @@ TextureImporter:
         x: 118
         y: 133
         width: 9
-        height: 10
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -573,7 +573,7 @@ TextureImporter:
         x: 129
         y: 133
         width: 6
-        height: 8
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,7 +594,7 @@ TextureImporter:
         x: 143
         y: 133
         width: 9
-        height: 7
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,7 +615,7 @@ TextureImporter:
         x: 156
         y: 133
         width: 8
-        height: 13
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -636,7 +636,7 @@ TextureImporter:
         x: 167
         y: 133
         width: 6
-        height: 13
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,7 +657,7 @@ TextureImporter:
         x: 177
         y: 133
         width: 8
-        height: 9
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,7 +678,7 @@ TextureImporter:
         x: 190
         y: 133
         width: 14
-        height: 5
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,13 +693,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_21
+      name: medBright
       rect:
         serializedVersion: 2
         x: 8
         y: 77
         width: 21
-        height: 31
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,7 +714,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_22
+      name: longBright
       rect:
         serializedVersion: 2
         x: 35
@@ -735,13 +735,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_23
+      name: pomeBright
       rect:
         serializedVersion: 2
         x: 55
         y: 77
         width: 17
-        height: 32
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,13 +756,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_24
+      name: pineBright
       rect:
         serializedVersion: 2
         x: 78
         y: 77
         width: 19
-        height: 35
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,13 +777,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_25
+      name: flowerBright
       rect:
         serializedVersion: 2
         x: 112
         y: 77
-        width: 10
-        height: 8
+        width: 16
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -798,34 +798,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_26
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 77
-        width: 3
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20c1136e377eb0e90800000000000000
-      internalID: -7058293506003887102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PixelManPlant_27
       rect:
         serializedVersion: 2
         x: 147
         y: 77
         width: 8
-        height: 13
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,7 +825,7 @@ TextureImporter:
         x: 158
         y: 77
         width: 6
-        height: 13
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -867,7 +846,7 @@ TextureImporter:
         x: 167
         y: 77
         width: 9
-        height: 4
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -888,7 +867,7 @@ TextureImporter:
         x: 179
         y: 77
         width: 9
-        height: 5
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -909,7 +888,7 @@ TextureImporter:
         x: 192
         y: 77
         width: 10
-        height: 6
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,13 +903,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_32
+      name: bigDark
       rect:
         serializedVersion: 2
         x: 11
         y: 19
         width: 27
-        height: 27
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -945,13 +924,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_33
+      name: smallTreeDark
       rect:
         serializedVersion: 2
         x: 45
         y: 19
         width: 23
-        height: 27
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -966,13 +945,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_34
+      name: medDark
       rect:
         serializedVersion: 2
         x: 75
         y: 19
         width: 21
-        height: 31
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -987,7 +966,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_35
+      name: longDark
       rect:
         serializedVersion: 2
         x: 102
@@ -1008,13 +987,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_36
+      name: pomeDork
       rect:
         serializedVersion: 2
         x: 122
         y: 19
         width: 17
-        height: 32
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1029,13 +1008,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_37
+      name: pineDark
       rect:
         serializedVersion: 2
         x: 145
         y: 19
         width: 19
-        height: 35
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1056,7 +1035,7 @@ TextureImporter:
         x: 172
         y: 19
         width: 9
-        height: 7
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1077,7 +1056,7 @@ TextureImporter:
         x: 185
         y: 19
         width: 8
-        height: 13
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1098,7 +1077,7 @@ TextureImporter:
         x: 196
         y: 19
         width: 6
-        height: 13
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1116,10 +1095,10 @@ TextureImporter:
       name: PixelManPlant_41
       rect:
         serializedVersion: 2
-        x: 36
-        y: 175
-        width: 13
-        height: 26
+        x: 134
+        y: 77
+        width: 9
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1127,20 +1106,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d48537c47fc4121c0800000000000000
-      internalID: -4530255125134747571
+      spriteID: ca2cf068933ec964ea68c1263f695a27
+      internalID: 1418511184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelManPlant_42
+      name: longDead
       rect:
         serializedVersion: 2
-        x: 134
-        y: 77
-        width: 9
-        height: 7
+        x: 39
+        y: 175
+        width: 8
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1148,8 +1127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7118fd86f77998720800000000000000
-      internalID: 2848974812764668183
+      spriteID: a879f6173e413d54dbc1775e49a929bc
+      internalID: 1915593604
       vertices: []
       indices: 
       edges: []
@@ -1165,11 +1144,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PixelManPlant_0: -6068126033608327963
-      PixelManPlant_1: 913691775452753245
-      PixelManPlant_10: -6765715232388179196
-      PixelManPlant_11: -8975973956356495923
-      PixelManPlant_12: -1082684779293468256
       PixelManPlant_13: 500784617099511700
       PixelManPlant_14: -4161215812244555331
       PixelManPlant_15: 3337967629743623409
@@ -1177,37 +1151,42 @@ TextureImporter:
       PixelManPlant_17: -2811360730352129836
       PixelManPlant_18: -9045204983600204315
       PixelManPlant_19: -6645595909770932833
-      PixelManPlant_2: -2187877002942285894
       PixelManPlant_20: -211664485753296453
-      PixelManPlant_21: -8260689255658831972
-      PixelManPlant_22: 7120372777706973424
-      PixelManPlant_23: -3101880533124659244
-      PixelManPlant_24: -8652135654715475101
-      PixelManPlant_25: -6993329050599715841
       PixelManPlant_26: -7058293506003887102
       PixelManPlant_27: 5342742372284950489
       PixelManPlant_28: 5183781268583324332
       PixelManPlant_29: -5737983791572176824
-      PixelManPlant_3: -4590990934492174713
       PixelManPlant_30: 3519653015712908137
       PixelManPlant_31: -6721285459849997539
-      PixelManPlant_32: 9012330046251320549
-      PixelManPlant_33: -4820805249678921565
-      PixelManPlant_34: 7084072536134212945
-      PixelManPlant_35: -2996470251689363531
-      PixelManPlant_36: 2579077281136251943
-      PixelManPlant_37: -133682734008875730
       PixelManPlant_38: -6026557584671076175
       PixelManPlant_39: 7443453546713652621
-      PixelManPlant_4: 9098618572081944536
       PixelManPlant_40: -5664607364697090514
-      PixelManPlant_41: -4530255125134747571
-      PixelManPlant_42: 2848974812764668183
+      PixelManPlant_41: 1418511184
       PixelManPlant_5: -5527455870975712080
       PixelManPlant_6: 2089553634264196741
       PixelManPlant_7: 6971717120446459414
-      PixelManPlant_8: -7304312153268001723
       PixelManPlant_9: -4376699400847677703
+      bigDark: 9012330046251320549
+      bigNight2: -6068126033608327963
+      bigSpooky: 913691775452753245
+      flowerBright: -6993329050599715841
+      longBright: 7120372777706973424
+      longDark: -2996470251689363531
+      longDead: 1915593604
+      longNight: -1082684779293468256
+      medBright: -8260689255658831972
+      medDark: 7084072536134212945
+      medNight: -8975973956356495923
+      medSpooky: -2187877002942285894
+      pineBright: -8652135654715475101
+      pineDark: -133682734008875730
+      pineNight: -7304312153268001723
+      pomeBright: -3101880533124659244
+      pomeDork: 2579077281136251943
+      pomeNight: -6765715232388179196
+      pumpkinSpooky: 9098618572081944536
+      smallTreeDark: -4820805249678921565
+      smallTreeSpooky: -4590990934492174713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

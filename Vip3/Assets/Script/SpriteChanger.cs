@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeDeco : MonoBehaviour
+public class SpriteChanger : MonoBehaviour
 {
     SpriteRenderer spriterRend;
-    public List<Sprite> treeList;
+    public List<Sprite> variantList;
     bool moveOffset = false;
     void Start()
     {
@@ -18,22 +18,16 @@ public class ChangeDeco : MonoBehaviour
         switch (SpriteChangeManager.Instance.spriteState)
         {
             case SpriteState.Bright:
-                spriterRend.sprite = treeList[0];
+                spriterRend.sprite = variantList[0];
                 break;
             case SpriteState.Dark:
-                spriterRend.sprite = treeList[1];
+                spriterRend.sprite = variantList[1];
                 break;
-            case SpriteState.Night:
-                
-                spriterRend.sprite = treeList[2];
-                if (!moveOffset)
-                {
-                    transform.position -= new Vector3(0, 0.2f);
-                    moveOffset = true;
-                }
+            case SpriteState.Night:                
+                spriterRend.sprite = variantList[2];
                 break;
             case SpriteState.Spooky:
-                spriterRend.sprite = treeList[3];
+                spriterRend.sprite = variantList[3];
                 break;
             default:
                 break;
