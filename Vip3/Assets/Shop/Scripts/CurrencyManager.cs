@@ -30,6 +30,7 @@ public class CurrencyManager : MonoBehaviour
         coinCount = PlayerPrefs.GetInt("CoinCount", 0);
         starCountTxt.text = ": " + starCount.ToString();
         coinCountTxt.text = ": " + coinCount.ToString();
+        starCount = 3;
     }
 
     public bool CanAfford(int price, string currencyType) //send in either "Star" or "Coin" as string when using this method

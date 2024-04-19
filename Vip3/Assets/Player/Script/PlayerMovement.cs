@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 baseScale;
 
     //references
-    private UpgradeManager upgradeManager; //to read what has been unlocked
+    [SerializeField] private UpgradeManager upgradeManager; //to read what has been unlocked
     private PlayerControls playerControls; //to read player inputs
 
 
@@ -33,9 +33,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
-        upgradeManager = GetComponent<UpgradeManager>();
         playerControls = GetComponent<PlayerControls>();
         baseScale = transform.localScale;
+        upgradeManager.Initiate();
     }
 
 
