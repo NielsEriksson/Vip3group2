@@ -6,7 +6,6 @@ public class SpriteChanger : MonoBehaviour
 {
     SpriteRenderer spriterRend;
     public List<Sprite> variantList;
-    bool moveOffset = false;
     void Start()
     {
         spriterRend = gameObject.GetComponent<SpriteRenderer>();
