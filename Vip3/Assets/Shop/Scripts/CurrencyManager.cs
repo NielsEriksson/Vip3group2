@@ -43,6 +43,7 @@ public class CurrencyManager : MonoBehaviour
     {
         starCount+= amount;
         PlayerPrefs.SetInt("StarCount", starCount);
+        Debug.Log(starCount);
         starCountTxt.text = ": " + starCount.ToString();
     }
 

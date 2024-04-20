@@ -25,11 +25,7 @@ public class ShopUIManager : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    private void Start()
-    {
-        //for testing purposes
-        LoadAndOpenShopUI();
-    }
+    
     public void OpenShopUI()//Simply activate the UI if the current shop npc has been visited before
     {
         ShopUIObject.SetActive(true);
@@ -57,7 +53,10 @@ public class ShopUIManager : MonoBehaviour
         if(currentShopItems.items.Count == 0) return;
         foreach(ShopItemSO item in currentShopItems.items)
         {
-            if(item.ItemType == ShopItemSO.ItemTypes.Mechanic)//checks which type of upgrade it is and sets it to the according tab
+            //Checks if the players has previously purchased the upgrade through playerprefs,
+            //as the currentlyUnlockedShopItems SO List would reset when the game is closed and reopened but not the player prefs
+            if (item.CheckPlayerPrefItem()) { continue; }
+            if (item.ItemType == ShopItemSO.ItemTypes.Mechanic)//checks which type of upgrade it is and sets it to the according tab
             {
                 LoadShopItemUIObject(MechanicsTab, item);
             }
