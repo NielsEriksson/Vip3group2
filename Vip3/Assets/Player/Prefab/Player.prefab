@@ -163,7 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 50
+  jumpHeight: 2.5
+  doubleJumpHeight: 1.5
   hasDoubleJump: 0
   collidable:
     serializedVersion: 2
