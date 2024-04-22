@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6022866092505369447}
   - component: {fileID: 1660376301820967924}
   m_Layer: 0
-  m_Name: Collectible
+  m_Name: StarCollectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 40130f0847fc96f45b10ad328c45e425, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 58768f8cb7efee749ab98dfb19047675, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
