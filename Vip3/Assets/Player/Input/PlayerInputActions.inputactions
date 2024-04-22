@@ -1,5 +1,5 @@
 {
-    "name": "PplayerInputActions",
+    "name": "PlayerInputActions",
     "maps": [
         {
             "name": "Player",
@@ -36,6 +36,15 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "de367b3c-6a18-4f60-94ec-a4c3619016a3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interaction",
+                    "type": "Button",
+                    "id": "807d508a-20dc-4c7e-947b-d6aef033042d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -271,6 +280,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c4f1edc-cc4f-4af7-8787-7d9a17771471",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
