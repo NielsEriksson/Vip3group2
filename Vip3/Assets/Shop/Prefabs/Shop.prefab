@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3922903009198784935}
   - component: {fileID: 7109084271961301235}
   - component: {fileID: 7299460964428191717}
+  - component: {fileID: -2411177622034400858}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -103,9 +104,9 @@ MonoBehaviour:
   onTriggerInteraction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ToggleVisibility, Assembly-CSharp
-        m_MethodName: SetActive
+      - m_Target: {fileID: -2411177622034400858}
+        m_TargetAssemblyTypeName: ShopNPC, Assembly-CSharp
+        m_MethodName: Interact
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -202,3 +203,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &-2411177622034400858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87396073126729486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3811b8b0ba3995b4d8941fede9db5eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemsAvailable: []
+  currentlyUnlockedShopItems: {fileID: 11400000, guid: e65592f2f1bd5f84f8db6e37124fbd50, type: 2}
