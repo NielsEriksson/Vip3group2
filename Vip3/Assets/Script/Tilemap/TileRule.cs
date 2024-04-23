@@ -18,7 +18,7 @@ public class TileRule : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         //if (Input.GetKeyDown(KeyCode.Space))
         foreach (Vector3Int pos in tilemap.cellBounds.allPositionsWithin)
         {
@@ -27,7 +27,8 @@ public class TileRule : MonoBehaviour
                 switch (SpriteChangeManager.Instance.spriteState)
                 {
                     case SpriteState.Bright:
-                        tilemap.SetTile(pos, ruleTiles[0]);
+                        //if (tilemap.GetTile(pos) == ruleTiles[0]) if for some reason there is a need to paint tiles other than groundTiles on groundTile tilemap
+                            tilemap.SetTile(pos, ruleTiles[0]);
                         SetDeco(0);
                         break;
                     case SpriteState.Dark:
@@ -53,7 +54,7 @@ public class TileRule : MonoBehaviour
     {
         for (int i = 0; i < decoTilemap.Count; i++)
         {
-            if(i == numSet)
+            if (i == numSet)
             {
                 decoTilemap[i].SetActive(true);
                 continue;
