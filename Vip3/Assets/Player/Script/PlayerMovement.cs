@@ -12,17 +12,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed;
 
     //Jump
-    [SerializeField] private float jumpForce;
-    public bool hasDoubleJump;
+    [SerializeField] private float jumpHeight;
+    [SerializeField] private float doubleJumpHeight;
+    public bool hasDoubleJump; 
 
     //Groundcheck
-    private bool collDown; //is colliding to something under the player
+    private bool collDown, collUp, collLeft, collRight; //is palyer colliding with something in any direction
     private CapsuleCollider2D capsuleCollider; //player collider
     [SerializeField] private LayerMask collidable; //which layers are collidable
     [SerializeField] private float collisionDetectionLength; //How far to check for collision
 
-    //crouch
+    //Minimize
     private Vector3 baseScale;
+    private bool isMinimized;
 
     //references
     [SerializeField] private UpgradeManager upgradeManager; //to read what has been unlocked
@@ -43,62 +45,83 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         moveDirection = playerControls.MoveDirection;
-        GroundCheck();
+        CollisionCheck();
     }
 
     void FixedUpdate()
     {
         Move();
-        Crouch();
     }
 
     private void Move()
     {
+        if (collLeft && moveDirection.x < 0 || collRight && moveDirection.x > 0)
+            return;
+
         if (upgradeManager.Left) // if player has unlocked left movement allow left movement otherwise only move right
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
         else if (moveDirection.x >= 0)
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
     }
 
-    #region GroundCheck
+    #region Collision
     //Check if player is touching the ground
-    private void GroundCheck()
+    private void CollisionCheck()
     {
         collDown = Physics2D.CapsuleCast(transform.position + (Vector3)capsuleCollider.offset, capsuleCollider.size, capsuleCollider.direction, 0, Vector2.down, collisionDetectionLength, collidable).collider != null;
         if (collDown)
         {
             hasDoubleJump = true;
         }
+
+        collUp = Physics2D.CapsuleCast(transform.position + (Vector3)capsuleCollider.offset, capsuleCollider.size, capsuleCollider.direction, 0, Vector2.up, collisionDetectionLength, collidable).collider != null;
+        collLeft = Physics2D.CapsuleCast(transform.position + (Vector3)capsuleCollider.offset, capsuleCollider.size, capsuleCollider.direction, 0, Vector2.left, collisionDetectionLength, collidable).collider != null;
+        collRight = Physics2D.CapsuleCast(transform.position + (Vector3)capsuleCollider.offset, capsuleCollider.size, capsuleCollider.direction, 0, Vector2.right, collisionDetectionLength, collidable).collider != null;
+        
     }
 
     #endregion
 
     #region Jump
+
+    private float CalculateJumpSpeed(float jumpHeight)
+    {
+        return Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
+    }
+
     public void Jump()
     {
+        float jumpSpeed = CalculateJumpSpeed(jumpHeight);
+
         if (collDown && upgradeManager.Jump) //jump if unlocked
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rb.velocity = new Vector2(rb.velocity.x, CalculateJumpSpeed(jumpHeight));
         }
         else if (!collDown && hasDoubleJump && upgradeManager.DoubleJump) //perform second jump if double jump unlocked & is in the iar
         {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            rb.velocity = new Vector2(rb.velocity.x, CalculateJumpSpeed(doubleJumpHeight));
             hasDoubleJump = false;
         }
     }
     #endregion
 
-    #region Crouch
+    #region Minimize
 
-    private void Crouch()
+    public void Minimize()
     {
         if (!upgradeManager.Crouch) //crouch if unlocked
             return;
 
-        if (moveDirection.y < 0) // half player scale if pressing down otherwise set it to normal
-            transform.localScale = new Vector3(baseScale.x/2,baseScale.y/2, baseScale.z);
-        else
+        if (isMinimized) // minimize player if button has been toggled{
+        {
+            transform.localScale = new Vector3(baseScale.x / 2, baseScale.y / 2, baseScale.z);
+            isMinimized = false;
+        }
+        else if(!isMinimized && !collUp)
+        {
             transform.localScale = baseScale;
+            isMinimized = true;
+        }
     }
     #endregion
 

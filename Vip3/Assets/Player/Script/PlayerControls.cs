@@ -10,7 +10,8 @@ public class PlayerControls : MonoBehaviour
     private PlayerInputActions playerInputActions;
     private InputAction moveInput;
     private InputAction jumpButton;
-    private InputAction InteractionButton;
+    private InputAction interactionButton;
+    private InputAction minimizeButton;
 
     //refrences
     PlayerMovement playerMovement; //ref to player movement to inform when jump etc has been pressed
@@ -40,9 +41,13 @@ public class PlayerControls : MonoBehaviour
         jumpButton.Enable();
         jumpButton.performed += Jump;
 
-        InteractionButton = playerInputActions.Player.Interaction;
-        InteractionButton.Enable();
-        InteractionButton.performed += Interaction;
+        interactionButton = playerInputActions.Player.Interaction;
+        interactionButton.Enable();
+        interactionButton.performed += Interaction;
+
+        minimizeButton = playerInputActions.Player.Minimize;
+        minimizeButton.Enable();
+        minimizeButton.performed += Minimize;
     }
 
     private void OnDisable()
@@ -52,8 +57,11 @@ public class PlayerControls : MonoBehaviour
         jumpButton.Disable();
         jumpButton.performed -= Jump;
 
-        InteractionButton.Disable();
-        InteractionButton.performed -= Interaction;
+        interactionButton.Disable();
+        interactionButton.performed -= Interaction;
+
+        minimizeButton.Disable();
+        minimizeButton.performed -= Minimize;
     }
 
     private void Jump(InputAction.CallbackContext context)
@@ -65,5 +73,10 @@ public class PlayerControls : MonoBehaviour
     {
         //Trigger interaction event
         onInteraction?.Invoke();
+    }
+
+    private void Minimize(InputAction.CallbackContext context)
+    {
+        playerMovement.Minimize();
     }
 }
