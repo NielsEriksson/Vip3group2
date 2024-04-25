@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left: 1
   jump: 1
-  doubleJump: 0
+  doubleJump: 1
   crouch: 1
   shopItems:
   - {fileID: 11400000, guid: 4148eeb1fb162474895265c635295b0d, type: 2}
