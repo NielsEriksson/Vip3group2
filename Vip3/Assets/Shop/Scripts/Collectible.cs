@@ -20,11 +20,11 @@ public class Collectible : MonoBehaviour
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
+        
         switch (type)
         {
             case CollectibleType.Star:
                 {
-
                     sp.sprite = starSprites[starSpriteIndex];
                     break;
                 }
