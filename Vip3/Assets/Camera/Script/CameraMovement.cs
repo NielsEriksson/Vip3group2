@@ -11,17 +11,15 @@ public class CameraMovement : MonoBehaviour
     [Header("Bounds")]
     [SerializeField] private float followBoundX = 0.15f;
     [SerializeField] private float followBoundY = 0.05f;
-    private Camera cameraRef;
 
     private float camHorizontalExtent;
     private float camVerticalExtent;
 
     private void Start()
     {
-        cameraRef = GetComponent<Camera>();
         camHorizontalExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
         camVerticalExtent = Camera.main.orthographicSize;
-        Camera.main.transform.position = new Vector3(worldBounds.center.x, worldBounds.center.y, Camera.main.transform.position.z);
+        transform.position = new Vector3(worldBounds.center.x, worldBounds.center.y, transform.position.z);
     }
 
     private void LateUpdate()
