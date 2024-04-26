@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Obstacles
   m_EditorClassIdentifier: 
   ItemType: 0
-  ItemName: Moving Left
+  ItemName: Obstacles
   ItemEvent:
     m_PersistentCalls:
       m_Calls:
