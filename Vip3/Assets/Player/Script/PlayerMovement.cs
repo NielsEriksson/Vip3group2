@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     //Jump
     [SerializeField] private float jumpHeight;
     [SerializeField] private float doubleJumpHeight;
-    public bool hasDoubleJump; 
+    private bool hasDoubleJump; 
 
     //Groundcheck
     private bool collDown, collUp, collLeft, collRight; //is palyer colliding with something in any direction
