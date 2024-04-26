@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 61887341}
   - component: {fileID: 61887343}
   - component: {fileID: 61887344}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundTilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12271,6 +12271,14 @@ PrefabInstance:
     - target: {fileID: 5326245295888967121, guid: b327fa5d1be125948b1fa06c03d39ef6, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961865390739087709, guid: b327fa5d1be125948b1fa06c03d39ef6, type: 3}
+      propertyPath: hasDoubleJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961865390739087709, guid: b327fa5d1be125948b1fa06c03d39ef6, type: 3}
+      propertyPath: upgradeManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
