@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7002ed6982d28c4449cebf33ea8477ac, type: 3}
   m_Name: UpgradeManager
   m_EditorClassIdentifier: 
-  left: 1
+  left: 0
   jump: 1
-  doubleJump: 1
-  crouch: 1
+  doubleJump: 0
+  crouch: 0
   shopItems:
   - {fileID: 11400000, guid: 4148eeb1fb162474895265c635295b0d, type: 2}
