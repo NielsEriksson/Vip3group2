@@ -13415,7 +13415,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.231573
+  orthographic size: 7.045473
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -13440,7 +13440,7 @@ Transform:
   m_GameObject: {fileID: 1787347973}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.42, y: 4.61, z: -10}
+  m_LocalPosition: {x: 9.47, y: 1.82, z: -10}
   m_LocalScale: {x: 202.75238, y: 51.48613, z: 51.48613}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13504,8 +13504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toFollow: {fileID: 1694324387}
   worldBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
+    m_Center: {x: 8, y: 0, z: 0}
+    m_Extent: {x: 15, y: 10, z: 0}
   followBoundX: 0.15
   followBoundY: 0.05
 --- !u!1 &1835844441

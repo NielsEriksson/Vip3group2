@@ -3164,7 +3164,7 @@ Transform:
   m_GameObject: {fileID: 548980843}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2963, y: 8.9471, z: -0.87514323}
+  m_LocalPosition: {x: 4.9806, y: 8.9471, z: -0.87514323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3216,7 +3216,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 114.163086, y: 44.55749}
+  m_Size: {x: 166.85461, y: 44.55749}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3234,7 +3234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2dc54fc84fac04a98935f85d73a016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0, y: 0}
+  parallaxEffectMultiplier: {x: 3, y: 0}
   infiniteHorizontal: 1
   infiniteVertical: 1
 --- !u!1 &880058143
@@ -3264,7 +3264,7 @@ Transform:
   m_GameObject: {fileID: 880058143}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3147, y: -3.3316002, z: -0.87514323}
+  m_LocalPosition: {x: 6.4615, y: -3.3316002, z: -0.87514323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3316,7 +3316,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 114.28754, y: 20}
+  m_Size: {x: 163.57268, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3334,7 +3334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2dc54fc84fac04a98935f85d73a016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0, y: 0}
+  parallaxEffectMultiplier: {x: 1, y: 0}
   infiniteHorizontal: 1
   infiniteVertical: 0
 --- !u!1001 &1028325104
@@ -3398,6 +3398,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
+--- !u!4 &1028325105 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8037995292691808837, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
+  m_PrefabInstance: {fileID: 1028325104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1112062817
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,7 +3430,7 @@ Transform:
   m_GameObject: {fileID: 1112062817}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4481, y: -3.3316002, z: -0.87514323}
+  m_LocalPosition: {x: 6.5319, y: -3.3316002, z: -0.87514323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3477,7 +3482,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 114.217384, y: 20}
+  m_Size: {x: 163.9103, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3495,8 +3500,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2dc54fc84fac04a98935f85d73a016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0, y: 0}
-  infiniteHorizontal: 1
+  parallaxEffectMultiplier: {x: 0.5, y: 0}
+  infiniteHorizontal: 0
   infiniteVertical: 0
 --- !u!1 &1319054842
 GameObject:
@@ -3717,7 +3722,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.231573
+  orthographic size: 7.6498814
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3742,7 +3747,7 @@ Transform:
   m_GameObject: {fileID: 1787347973}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.42, y: 4.61, z: -10}
+  m_LocalPosition: {x: -0.42, y: 4.38, z: -10}
   m_LocalScale: {x: 202.75238, y: 51.48613, z: 51.48613}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3805,10 +3810,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9553771f9de0c2444ab39cfdf2119d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toFollow: {fileID: 0}
+  toFollow: {fileID: 1028325105}
   worldBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
+    m_Center: {x: 0, y: 4.5, z: 0}
+    m_Extent: {x: 20, y: 15, z: 0}
   followBoundX: 0.15
   followBoundY: 0.05
 --- !u!1 &1835844441
