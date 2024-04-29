@@ -1,58 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
 
-[CreateAssetMenu(fileName = "UpgradeManager", menuName = "UpgradeManager")]
-public class UpgradeManager : ScriptableObject
+public class UpgradeManager : MonoBehaviour
 {
-    [SerializeField] private bool left;
-    [SerializeField] private bool jump;
-    [SerializeField] private bool doubleJump;
-    [SerializeField] private bool crouch;
+    public static UpgradeManager Instance;
+    [field: SerializeField] UpgradeManagerSO UpgradeManagerSO;
 
-    [SerializeField] private List<ShopItemSO> shopItems;
+    //Mechanic Upgrade Bools
+    [field: SerializeField] public bool left;
+    [field: SerializeField] public bool jump;
+    [field: SerializeField] public bool doubleJump;
+    [field: SerializeField] public bool crouch;
+    [field: SerializeField] public bool coins;
+    [field: SerializeField] public bool combat;
+    [field: SerializeField] public bool enemies;
+    [field: SerializeField] public bool obstacles;
+    //Customization Upgrade Bools
+    [field: SerializeField] public bool backgroundTexture;
+    [field: SerializeField] public bool sidescroll;
+    [field: SerializeField] public bool platformTexture;
+    [field: SerializeField] public bool music;
+    [field: SerializeField] public bool sfx;
+    [field: SerializeField] public bool playerCustomization;
 
-    public bool Left { get { return left; } }
-    public bool Jump { get { return jump; } }
-    public bool DoubleJump { get { return doubleJump; } }
-    public bool Crouch { get { return crouch; } }
-
-    //private void Start()
-    //{
-    //    foreach(ShopItemSO item in shopItems)
-    //    {
-    //        if(item.CheckPlayerPrefItem())
-    //            item.ItemEvent?.Invoke();
-    //    }
-    //}
-
-    public void Initiate()
+    private void Awake()
     {
-        foreach (ShopItemSO item in shopItems)
+        if (Instance == null)
         {
-            if (item.CheckPlayerPrefItem())
-                item.ItemEvent?.Invoke();
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
         }
     }
-
-    public void UnlockLeft()
+    void Start()
     {
-        left = true;
-    }
-
-    public void UnlockJump()
-    {
-        Debug.Log("unlocked");
-        jump = true;
-    }
-
-    public void UnlockDoubleJump()
-    {
-        doubleJump = true;
-    }
-
-    public void UnlockCrouch()
-    {
-        crouch = true;
+        UpgradeManagerSO.Initiate();
     }
 }

@@ -9,7 +9,7 @@ public class ShopUIManager : MonoBehaviour
     public GameObject CustomizationsTab;//Customizations upgrade tab background object , currently called "CTab"
     public GameObject MechanicsTab;//Mechanics upgrade tab background object , currently called "MTab"
     public GameObject ShopItemUIPrefab;//The prefab for SHop item UI objects
-    public CurrentlyUnlockedShopItemsSO currentShopItems;
+    public CurrentlyAvailableShopItemsSO currentShopItems;
 
     private void Awake()
     {
@@ -24,7 +24,6 @@ public class ShopUIManager : MonoBehaviour
             Instance = this;
         }
     }
-    // Start is called before the first frame update
     
     public void OpenShopUI()//Simply activate the UI if the current shop npc has been visited before
     {

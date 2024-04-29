@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class Collectible : MonoBehaviour
 {
-    private enum CollectibleType
+    public enum CollectibleType
     {
         Star,
         Coin
     }
-    [SerializeField] private CollectibleType type;
+    [SerializeField] public CollectibleType type;
     [SerializeField] private Sprite[] starSprites;
     int starSpriteIndex = 0;//will be used to change star sprite for upgrade (Will only work if we have 1 different sprite, if we have more i will need to find an other way of doing it)
     [SerializeField] private Sprite[] coinSprites;
@@ -20,7 +20,7 @@ public class Collectible : MonoBehaviour
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
-        
+        CurrencyManager.Instance.allCollectibles.Add(this);
         switch (type)
         {
             case CollectibleType.Star:
@@ -31,6 +31,7 @@ public class Collectible : MonoBehaviour
 
             case CollectibleType.Coin:
                 {
+                    if(!UpgradeManager.Instance.coins) { gameObject.SetActive(false); }//Destroys the coin game object if coins upgrade is not unlocked yet
                     sp.sprite = coinSprites[coinSpriteIndex];
                     break;
                 }

@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isMinimized;
 
     //references
-    [SerializeField] private UpgradeManager upgradeManager; //to read what has been unlocked
     private PlayerControls playerControls; //to read player inputs
 
 
@@ -37,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         playerControls = GetComponent<PlayerControls>();
         baseScale = transform.localScale;
-        upgradeManager.Initiate();
     }
 
 
@@ -58,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         if (collLeft && moveDirection.x < 0 || collRight && moveDirection.x > 0)
             return;
 
-        if (upgradeManager.Left) // if player has unlocked left movement allow left movement otherwise only move right
+        if (UpgradeManager.Instance.left) // if player has unlocked left movement allow left movement otherwise only move right
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
         else if (moveDirection.x >= 0)
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
@@ -93,11 +91,11 @@ public class PlayerMovement : MonoBehaviour
     {
         float jumpSpeed = CalculateJumpSpeed(jumpHeight);
 
-        if (collDown && upgradeManager.Jump) //jump if unlocked
+        if (collDown && UpgradeManager.Instance.jump) //jump if unlocked
         {
             rb.velocity = new Vector2(rb.velocity.x, CalculateJumpSpeed(jumpHeight));
         }
-        else if (!collDown && hasDoubleJump && upgradeManager.DoubleJump) //perform second jump if double jump unlocked & is in the iar
+        else if (!collDown && hasDoubleJump && UpgradeManager.Instance.doubleJump) //perform second jump if double jump unlocked & is in the iar
         {
             rb.velocity = new Vector2(rb.velocity.x, CalculateJumpSpeed(doubleJumpHeight));
             hasDoubleJump = false;
@@ -109,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Minimize()
     {
-        if (!upgradeManager.Crouch) //crouch if unlocked
+        if (!UpgradeManager.Instance.crouch) //crouch if unlocked
             return;
 
         if (isMinimized) // minimize player if button has been toggled{
