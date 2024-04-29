@@ -17,8 +17,8 @@ MonoBehaviour:
   ItemEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 266234c694a4bc743aa31a1202066179, type: 2}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: f55134de6812213488748b3f05e6a6b4, type: 2}
+        m_TargetAssemblyTypeName: UpgradeManagerSO, Assembly-CSharp
         m_MethodName: UnlockLeft
         m_Mode: 1
         m_Arguments:

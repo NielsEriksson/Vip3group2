@@ -11,6 +11,9 @@ public class CurrencyManager : MonoBehaviour
     public TMP_Text starCountTxt;
     public TMP_Text coinCountTxt;
 
+    public GameObject coinDisplay;
+
+    [HideInInspector] public List<Collectible> allCollectibles;
     private void Awake()
     {
         // If there is an instance, and it's not me, delete myself.
@@ -30,6 +33,7 @@ public class CurrencyManager : MonoBehaviour
         coinCount = PlayerPrefs.GetInt("CoinCount", 0);
         starCountTxt.text = ": " + starCount.ToString();
         coinCountTxt.text = ": " + coinCount.ToString();
+        if(!UpgradeManager.Instance.coins){coinDisplay.SetActive(false);}
     }
 
     public bool CanAfford(int price, string currencyType) //send in either "Star" or "Coin" as string when using this method
@@ -52,5 +56,9 @@ public class CurrencyManager : MonoBehaviour
         coinCount+=amount;
         PlayerPrefs.SetInt("CoinCount", coinCount);
         coinCountTxt.text =": " + coinCount.ToString();
+    }
+    public void ActivateCoinDisplay()
+    {
+        coinDisplay.SetActive(true);
     }
 }

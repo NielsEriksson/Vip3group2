@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8037995292691808837}
   - component: {fileID: 3818675333874772947}
   - component: {fileID: 7976245254357912885}
-  - component: {fileID: 4800508251520485153}
   - component: {fileID: 8495692131553933015}
   - component: {fileID: 1069391003266195120}
+  - component: {fileID: 8025649244765040934}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -115,7 +115,53 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &4800508251520485153
+--- !u!114 &8495692131553933015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7502568621925961066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f764c9603f38e1b498f648a67d14308e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpHeight: 2.5
+  doubleJumpHeight: 1.5
+  collidable:
+    serializedVersion: 2
+    m_Bits: 8
+  collisionDetectionLength: 1
+--- !u!114 &1069391003266195120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7502568621925961066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0139413a1ac6f834586143a5b3307ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Interaction, Assembly-CSharp
+        m_MethodName: TriggerInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!70 &8025649244765040934
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,54 +193,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.6, y: 0.9}
+  m_Offset: {x: -0.032027185, y: 0}
+  m_Size: {x: 0.7936028, y: 1}
   m_Direction: 0
---- !u!114 &8495692131553933015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7502568621925961066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f764c9603f38e1b498f648a67d14308e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpHeight: 2.5
-  doubleJumpHeight: 1.5
-  hasDoubleJump: 0
-  collidable:
-    serializedVersion: 2
-    m_Bits: 8
-  collisionDetectionLength: 1
-  upgradeManager: {fileID: 11400000, guid: 266234c694a4bc743aa31a1202066179, type: 2}
---- !u!114 &1069391003266195120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7502568621925961066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0139413a1ac6f834586143a5b3307ab4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onInteraction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Interaction, Assembly-CSharp
-        m_MethodName: TriggerInteraction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

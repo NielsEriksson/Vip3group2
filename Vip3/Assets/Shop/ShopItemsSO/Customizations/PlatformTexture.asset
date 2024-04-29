@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c110e31e2d550fb42b77662e0543269b, type: 3}
-  m_Name: Music
+  m_Name: PlatformTexture
   m_EditorClassIdentifier: 
   ItemType: 1
-  ItemName: Music
+  ItemName: Platform Texture
   ItemEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: f55134de6812213488748b3f05e6a6b4, type: 2}
         m_TargetAssemblyTypeName: UpgradeManagerSO, Assembly-CSharp
-        m_MethodName: UnlockMusic
+        m_MethodName: UnlockPlatformTexture
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30,4 +30,4 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   ItemCost: 3
-  ItemIcon: {fileID: 21300000, guid: 25d138337387fce41be07079ae434951, type: 3}
+  ItemIcon: {fileID: 21300000, guid: c0ced59eb0176454886bbc0407e71090, type: 3}
