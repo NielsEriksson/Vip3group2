@@ -9,10 +9,11 @@ public class Death : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       /* if (collision.CompareTag("Player"))
-        {*/
+        if (collision.CompareTag("Player"))
+        {
             Debug.Log("hit");
             playerPos.position = respawnPoint.position;
-       // }
+            AudioManager.Instance.PlaySFX(Sound.Death);
+        }
     }
 }
