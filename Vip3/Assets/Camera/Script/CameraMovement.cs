@@ -19,14 +19,21 @@ public class CameraMovement : MonoBehaviour
     {
         camHorizontalExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
         camVerticalExtent = Camera.main.orthographicSize;
-        transform.position = new Vector3(worldBounds.center.x, worldBounds.center.y, transform.position.z);
+        transform.position = new Vector3(toFollow.position.x, toFollow.position.y, transform.position.z);
+
+        float x = transform.position.x > worldBounds.center.x ? 1 : -1;
+        float y = transform.position.y > worldBounds.center.y ? 1 : -1;
+        if (!ToFollowInXBounds())
+            transform.position = new Vector3(x * (worldBounds.center.x + worldBounds.extents.x - camHorizontalExtent), transform.position.y, transform.position.z);
+        if (!ToFollowInYBounds())
+            transform.position = new Vector3(toFollow.position.x, y * (worldBounds.center.y + worldBounds.extents.y - camVerticalExtent), transform.position.z);
     }
 
     private void LateUpdate()
     {
         if (toFollow == null) return;
         //if (transform.position.x + camHorizontalExtent >= worldBounds.center.x  + worldBounds.extents.x)
-            //return;
+        //return;
 
         Vector3 newPosition = CalculateFollowBounds();
 
