@@ -65,7 +65,8 @@ public class ShootingEnemy : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(shootingSpeed);
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            bullet.GetComponent<Projectile>().direction = transform.right.normalized;
         }
     }
     
