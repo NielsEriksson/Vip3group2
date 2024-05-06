@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
     //Movement
     private Rigidbody2D rb;
     private Vector2 moveDirection;
-    [SerializeField] float maxMoveSpeed;
-    [SerializeField] float acceleration;
+    [SerializeField] float maxMoveSpeed = 5;
+    [SerializeField] float acceleration = 25;
 
     //Jump
     [SerializeField] private float jumpHeight;
