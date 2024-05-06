@@ -5,7 +5,7 @@ using UnityEngine;
 //This script should be put on the camera GO
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] private Transform toFollow;
+    private Transform toFollow;
     [SerializeField] private Bounds worldBounds; //the camera will only move within these bounds, and never move outside
 
     [Header("Bounds")]
@@ -17,6 +17,7 @@ public class CameraMovement : MonoBehaviour
 
     private void Start()
     {
+        toFollow = GameObject.FindWithTag("Player").transform;
         camHorizontalExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
         camVerticalExtent = Camera.main.orthographicSize;
         transform.position = new Vector3(toFollow.position.x, toFollow.position.y, transform.position.z);
