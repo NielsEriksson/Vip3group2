@@ -114,14 +114,11 @@ public class PlayerMovement : MonoBehaviour
         if (collDown && UpgradeManager.Instance.jump) //jump if unlocked
         {
             rb.velocity = new Vector2(rb.velocity.x, CalculateJumpSpeed(jumpHeight));
-            AudioManager.Instance.PlaySFX(Sound.Jump);
         }
         else if (!collDown && hasDoubleJump && UpgradeManager.Instance.doubleJump) //perform second jump if double jump unlocked & is in the iar
         {
             rb.velocity = new Vector2(rb.velocity.x, CalculateJumpSpeed(doubleJumpHeight));
             hasDoubleJump = false;
-            AudioManager.Instance.PlaySFX(Sound.Jump);
-
         }
     }
     #endregion
