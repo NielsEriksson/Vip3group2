@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingEnemy : MonoBehaviour
+public class ShootingEnemy : MonoBehaviour
 {
     public Transform enemy;
     public Transform start;
@@ -11,6 +11,16 @@ public class MovingEnemy : MonoBehaviour
     int dir = 1;
     public float speed;
 
+    public float shootingSpeed;
+    private float bulletSpeed;
+
+    public GameObject bulletPrefab;
+
+    private void Start()
+    {
+        bulletSpeed = speed * 3;
+        StartCoroutine(Shoot());
+    }
     private void Update()
     {
         Vector2 target = CurrentMovementTarget();
@@ -50,4 +60,13 @@ public class MovingEnemy : MonoBehaviour
         }
     }
 
+    private IEnumerator Shoot()
+    {   
+        while (true)
+        {
+            yield return new WaitForSeconds(shootingSpeed);
+            Instantiate(bulletPrefab, transform.position, transform.rotation);
+        }
+    }
+    
 }

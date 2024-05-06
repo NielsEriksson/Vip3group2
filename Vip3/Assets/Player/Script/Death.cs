@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    protected Transform respawnPoint;
+    public Transform respawnPoint;
     protected Transform playerPos;
 
 
     public virtual void Start()
     {
-        respawnPoint = GameObject.FindWithTag("RespawnPoint").transform;
         playerPos = GameObject.FindWithTag("Player").transform;
     }
     private void OnTriggerEnter2D(Collider2D collision)
