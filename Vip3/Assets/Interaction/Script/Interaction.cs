@@ -13,7 +13,7 @@ public class Interaction : MonoBehaviour
     private bool playerInRange; //is the player in range of the interaction
 
     //Events
-    [SerializeField] private UnityEvent onTriggerInteraction;
+    [SerializeField] public UnityEvent onTriggerInteraction;
     [SerializeField] private UnityEvent onPlayerEnter;
     [SerializeField] private UnityEvent onPlayerExit;
 

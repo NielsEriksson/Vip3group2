@@ -31,6 +31,7 @@ public class PlayerControls : MonoBehaviour
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        onInteraction = GameObject.FindGameObjectWithTag("ShopObject").GetComponent<Interaction>().onTriggerInteraction;
     }
     private void OnEnable()
     {
