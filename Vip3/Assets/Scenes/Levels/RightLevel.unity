@@ -2453,14 +2453,6 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8037995292691808837, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8037995292691808837, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8037995292691808837, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.82
       objectReference: {fileID: 0}
@@ -2499,10 +2491,6 @@ PrefabInstance:
     - target: {fileID: 8037995292691808837, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8495692131553933015, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
-      propertyPath: jumpHeight
-      value: 3.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5221,7 +5209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 124877235}
-  playerPos: {fileID: 514311219}
 --- !u!1 &5618585441307105651
 GameObject:
   m_ObjectHideFlags: 0

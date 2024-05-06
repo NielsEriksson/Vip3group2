@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.438, y: 4.015, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,13 +127,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f764c9603f38e1b498f648a67d14308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpHeight: 2.5
+  maxMoveSpeed: 5
+  acceleration: 25
+  jumpHeight: 3.2
   doubleJumpHeight: 1.5
+  wallJumpHeight: 1
+  wallJumpXSpeed: 10
+  collDown: 0
+  collUp: 0
+  collLeft: 0
+  collRight: 0
   collidable:
     serializedVersion: 2
     m_Bits: 8
-  collisionDetectionLength: 1
+  collisionDetectionLength: 0.1
 --- !u!114 &1069391003266195120
 MonoBehaviour:
   m_ObjectHideFlags: 0
