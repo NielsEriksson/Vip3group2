@@ -12,10 +12,7 @@ public class ShopNPC : MonoBehaviour, IInteractable
     [Tooltip("The new shop items available at this specific shop")][SerializeField] List<ShopItemSO> ItemsAvailable; //The new shop items available at this specific shop
     private bool isFirstTimeVisiting = true;//checks whether it is the first time the player interact with this specific shop npc
     public CurrentlyAvailableShopItemsSO currentlyAvailableShopItems; //All unpurchased shop items the player currently has unlocked Scriptable Object
-    public void Start()
-    {
-        PlayerPrefs.DeleteAll(); // for testing purposes so that upgrades reset every time we run the program, will need to be removed later on
-    }
+  
     public void Interact()
     {
         if(isFirstTimeVisiting)//If it is the first time visiting this npc the list of new upgrades is comapred to the list of already unlocked 

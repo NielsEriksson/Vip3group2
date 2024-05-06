@@ -4,30 +4,28 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     [SerializeField] string sceneToLoadName;
+    public static string lastScene;
 
-    //public void LoadScene(int scene)
-    //{
-    //    SceneManager.LoadScene(scene);
-    //}
-    //public void LoadScene(string scene)
-    //{       
-    //    SceneManager.LoadScene(scene);
-    //}
-
+    private void Start(){
+        if(lastScene == null)return;
+        else if (sceneToLoadName == lastScene){
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.z); //move player close to where it came from
+        Death death = FindObjectOfType<Death>();
+        death.respawnPoint = transform; //setting respawn point depending on what the previous scene was
+        }    
+    }
     public void LoadSavedScene()
     {
+        lastScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneToLoadName);
     }
-    //public void ReloadScene()
-    //{
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    //}
     public void Quit()
     {
         Application.Quit();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        LoadSavedScene();
+        LoadSavedScene(); //when collided load next scene
     }
 }

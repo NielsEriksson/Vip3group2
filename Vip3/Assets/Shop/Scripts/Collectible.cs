@@ -15,12 +15,16 @@ public class Collectible : MonoBehaviour
     int starSpriteIndex = 0;//will be used to change star sprite for upgrade (Will only work if we have 1 different sprite, if we have more i will need to find an other way of doing it)
     [SerializeField] private Sprite[] coinSprites;
     int coinSpriteIndex = 0;//will be used to change coin sprite for upgrade
-    private SpriteRenderer sp;
+    [HideInInspector] public SpriteRenderer sp;
     // Start is called before the first frame update
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
         CurrencyManager.Instance.allCollectibles.Add(this);
+        SetSprites();
+    }
+    public void SetSprites()
+    {
         switch (type)
         {
             case CollectibleType.Star:
@@ -31,13 +35,13 @@ public class Collectible : MonoBehaviour
 
             case CollectibleType.Coin:
                 {
-                    if(!UpgradeManager.Instance.coins) { gameObject.SetActive(false); }//Destroys the coin game object if coins upgrade is not unlocked yet
+                    if (!UpgradeManager.Instance.coins) { gameObject.SetActive(false); }//Destroys the coin game object if coins upgrade is not unlocked yet
+
                     sp.sprite = coinSprites[coinSpriteIndex];
                     break;
                 }
         }
     }
-
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
