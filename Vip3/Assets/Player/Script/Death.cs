@@ -25,5 +25,6 @@ public class Death : MonoBehaviour
         Debug.Log("hit");
         playerPos.position = respawnPoint.position;
         AudioManager.Instance.PlaySFX(Sound.Death);
+        CameraMovement.instance.RecenterCamera();
     }
 }

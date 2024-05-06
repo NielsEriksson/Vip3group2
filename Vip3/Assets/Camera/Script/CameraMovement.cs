@@ -5,6 +5,7 @@ using UnityEngine;
 //This script should be put on the camera GO
 public class CameraMovement : MonoBehaviour
 {
+    public static CameraMovement instance;
     private Transform toFollow;
     [SerializeField] private Bounds worldBounds; //the camera will only move within these bounds, and never move outside
 
@@ -17,19 +18,16 @@ public class CameraMovement : MonoBehaviour
 
     private void Start()
     {
+        if(instance == null)
+            instance = this;
+        else
+            Destroy(this.gameObject);
+
         toFollow = GameObject.FindWithTag("Player").transform;
         camHorizontalExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
         camVerticalExtent = Camera.main.orthographicSize;
-        transform.position = new Vector3(toFollow.position.x, toFollow.position.y, transform.position.z);
 
-        float x = transform.position.x > worldBounds.center.x ? worldBounds.center.x + worldBounds.extents.x - camHorizontalExtent : worldBounds.center.x - worldBounds.extents.x + camHorizontalExtent;
-        float y = transform.position.y > worldBounds.center.y ? worldBounds.center.y + worldBounds.extents.y - camVerticalExtent : worldBounds.center.y - worldBounds.extents.y + camVerticalExtent;
-        if (!ToFollowInXBounds())
-            transform.position = new Vector3(x, transform.position.y, transform.position.z);
-        if (!ToFollowInYBounds())
-            transform.position = new Vector3(transform.position.x, y , transform.position.z);
-        Debug.Log(y* (worldBounds.center.y + worldBounds.extents.y - camVerticalExtent));
-        Debug.Log(camVerticalExtent);
+        RecenterCamera();
     }
 
     private void LateUpdate()
@@ -88,6 +86,17 @@ public class CameraMovement : MonoBehaviour
     public bool ToFollowInYBounds()
     {
         return toFollow.position.y + camHorizontalExtent <= worldBounds.center.y + worldBounds.extents.y && toFollow.position.y - camHorizontalExtent >= worldBounds.center.y - worldBounds.extents.y;
+    }
+
+    public void RecenterCamera()
+    {
+        transform.position = new Vector3(toFollow.position.x, toFollow.position.y, transform.position.z);
+        float x = transform.position.x > worldBounds.center.x ? worldBounds.center.x + worldBounds.extents.x - camHorizontalExtent : worldBounds.center.x - worldBounds.extents.x + camHorizontalExtent;
+        float y = transform.position.y > worldBounds.center.y ? worldBounds.center.y + worldBounds.extents.y - camVerticalExtent : worldBounds.center.y - worldBounds.extents.y + camVerticalExtent;
+        if (!ToFollowInXBounds())
+            transform.position = new Vector3(x, transform.position.y, transform.position.z);
+        if (!ToFollowInYBounds())
+            transform.position = new Vector3(transform.position.x, y, transform.position.z);
     }
 
     private void OnDrawGizmos()
