@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum Sound
 {
-    BG,Death,Jump,PickUp,Minimize
+    BG, Death, Jump, PickUp, Minimize
 }
 public class AudioManager : MonoBehaviour
 {
@@ -13,8 +13,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource sfx;
 
     public AudioClip[] soundArray;
-    public Sound sound;
-
+    bool musicUnlocked;
     private void Awake()
     {
         if (Instance == null)
@@ -28,17 +27,27 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        music.clip = Play(Sound.BG);
-        music.Play();
+        music.clip = Assign(Sound.BG);
+        musicUnlocked = false;
+    }
+
+    private void Update()
+    {
+        if (UpgradeManager.Instance.music && !musicUnlocked)
+        {
+            music.Play();
+            musicUnlocked = true;
+        }
+
     }
 
     public void PlaySFX(Sound sound)
     {
-        //add condition later
-        sfx.PlayOneShot(Play(sound));
+        if(UpgradeManager.Instance.sfx)
+         sfx.PlayOneShot(Assign(sound));
     }
 
-    public AudioClip Play(Sound sound)
+    public AudioClip Assign(Sound sound)
     {
         return soundArray[(int)sound];
     }
