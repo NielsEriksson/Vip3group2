@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+using System;
 
 public enum Sound
 {
-    BG, Death, Jump, PickUp, Minimize
+    BG, Death, Jump, PickUp, Minimize,Maximize
 }
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
     [SerializeField] AudioSource music;
     [SerializeField] AudioSource sfx;
+    public EnumToAudio enumToAudio;
 
-    public AudioClip[] soundArray;
     bool musicUnlocked;
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -25,10 +29,14 @@ public class AudioManager : MonoBehaviour
             Destroy(this);
         }
     }
+
     private void Start()
     {
+        enumToAudio = gameObject.GetComponent<EnumToAudio>();
         music.clip = Assign(Sound.BG);
         musicUnlocked = false;
+
+
     }
 
     private void Update()
@@ -49,6 +57,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip Assign(Sound sound)
     {
-        return soundArray[(int)sound];
+        return enumToAudio.audioList[(int)sound];
     }
+
+
 }

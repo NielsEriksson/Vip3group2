@@ -138,6 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6064650502568675624}
   - component: {fileID: 8564523493036669066}
+  - component: {fileID: 5754698992988067355}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -176,11 +177,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: {fileID: 3108628841747300686}
   sfx: {fileID: 3432495228840485887}
-  soundArray:
+  enumToAudio: {fileID: 5754698992988067355}
+--- !u!114 &5754698992988067355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957287571670484915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daad3c4349e671a4b8e858eebc1e0fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioList:
   - {fileID: 8300000, guid: 06906d718be5b6a4cb2df8732bf39832, type: 3}
   - {fileID: 8300000, guid: b9eff218e132a4e76be78840eca96fb2, type: 3}
   - {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
-  sound: 0
+  - {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
+  - {fileID: 8300000, guid: 881e3f52c86c94f26a60718d35627cd8, type: 3}
+  - {fileID: 8300000, guid: 7e9ee6dc04a5d40d1a5dfc4beb9865e7, type: 3}
 --- !u!1 &7169262092140927469
 GameObject:
   m_ObjectHideFlags: 0
