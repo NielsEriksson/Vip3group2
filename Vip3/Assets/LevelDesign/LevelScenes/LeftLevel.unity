@@ -4454,37 +4454,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1069391003266195120, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069391003266195120, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069391003266195120, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 729842282}
-    - target: {fileID: 1069391003266195120, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 729842282}
-    - target: {fileID: 1069391003266195120, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069391003266195120, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: TriggerInteraction
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069391003266195120, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Interaction, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069391003266195120, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7502568621925961066, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6128,7 +6100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &760893855645537690
 RectTransform:
   m_ObjectHideFlags: 0

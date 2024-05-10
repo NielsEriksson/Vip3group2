@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8495692131553933015}
   - component: {fileID: 1069391003266195120}
   - component: {fileID: 4467362343663174324}
+  - component: {fileID: 8841985280591456828}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -213,3 +214,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8841985280591456828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7502568621925961066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fce513695d1ac14682a8ecd74082c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {r: 0.19215688, g: 0.3019608, b: 0.47058827, a: 1}
+  - {r: 0.9333334, g: 0.6313726, b: 0.37647063, a: 1}
+  - {r: 0.21960786, g: 0.48235297, b: 0.2627451, a: 1}
+  - {r: 0.8980393, g: 0.20784315, b: 0.14117648, a: 1}
+  - {r: 1, g: 0.4764151, b: 0.871005, a: 1}
+  - {r: 0.044054817, g: 0.089869104, b: 0.6226415, a: 1}
+  - {r: 0.2783019, g: 1, b: 0.6968733, a: 1}
+  - {r: 0.3973638, g: 0.21226418, b: 1, a: 1}
+  - {r: 1, g: 0.44569662, b: 0.0990566, a: 1}
+  - {r: 0.3998975, g: 0.735849, b: 0.2672659, a: 1}

@@ -83,6 +83,7 @@ public class UpgradeManagerSO : ScriptableObject
     }
     public void UnlockPlayerCustomization()
     {
+        PlayerSkins.instance.ChangeToRandomColor();
         UpgradeManager.Instance.playerCustomization = true;
     }
     #endregion
