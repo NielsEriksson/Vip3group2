@@ -18,10 +18,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float doubleJumpHeight;
     [SerializeField] private float wallJumpHeight;
     [SerializeField] private float wallJumpXSpeed;
+    [SerializeField] private float coyoteTimeThreshold = 0.1f;
+    private float timeLeftGround;
     private bool hasDoubleJump;
+    private bool coyoteUseable;
 
     //Groundcheck
-    public bool collDown, collUp, collLeft, collRight; //is palyer colliding with something in any direction
+    private bool collDown, collUp, collLeft, collRight; //is palyer colliding with something in any direction
     private BoxCollider2D boxCollider; //player collider
     [SerializeField] private LayerMask collidable; //which layers are collidable
     [SerializeField] private float collisionDetectionLength; //How far to check for collision
@@ -33,6 +36,13 @@ public class PlayerMovement : MonoBehaviour
     //references
     private PlayerControls playerControls; //to read player inputs
 
+    private bool CanUseCoyote
+    {
+        get
+        {
+            return coyoteUseable && !collDown && timeLeftGround + coyoteTimeThreshold > Time.time;
+        }
+    }
 
     void Start()
     {
@@ -83,11 +93,19 @@ public class PlayerMovement : MonoBehaviour
     //Check if player is touching the ground
     private void CollisionCheck()
     {
-        collDown = Physics2D.BoxCast(transform.position + (Vector3)boxCollider.offset, boxCollider.size * transform.localScale, 0, Vector2.down, collisionDetectionLength, collidable).collider != null;
-        if (collDown)
+        bool groundCheck = Physics2D.BoxCast(transform.position + (Vector3)boxCollider.offset, boxCollider.size * transform.localScale, 0, Vector2.down, collisionDetectionLength, collidable).collider != null;
+
+        if (collDown && !groundCheck)
         {
+            timeLeftGround = Time.time; //Onyl trigger when first leaving
             hasDoubleJump = true;
         }
+        else if (!collDown && groundCheck)
+        {
+            coyoteUseable = true; // Only trigger when first touching
+        }
+        collDown = groundCheck;
+
 
         collUp = Physics2D.BoxCast(transform.position + (Vector3)boxCollider.offset, boxCollider.size * transform.localScale, 0, Vector2.up, collisionDetectionLength, collidable).collider != null;
         collLeft = Physics2D.BoxCast(transform.position + (Vector3)boxCollider.offset, boxCollider.size * transform.localScale, 0, Vector2.left, collisionDetectionLength, collidable).collider != null;
@@ -107,19 +125,21 @@ public class PlayerMovement : MonoBehaviour
     public void Jump()
     {
 
-        if ((collLeft && moveDirection.x < 0) || (collRight && moveDirection.x > 0) && !collDown)
+        if ((collLeft && moveDirection.x < 0) || (collRight && moveDirection.x > 0) && !collDown) // wallJump
         {
             rb.velocity = new Vector2(-moveDirection.x * wallJumpXSpeed, CalculateJumpSpeed(wallJumpHeight));
         }
-        if (collDown && UpgradeManager.Instance.jump) //jump if unlocked
+        if ((collDown || CanUseCoyote) && UpgradeManager.Instance.jump) //jump if unlocked
         {
             rb.velocity = new Vector2(rb.velocity.x, CalculateJumpSpeed(jumpHeight));
             AudioManager.Instance.PlaySFX(Sound.Jump);
+            coyoteUseable = false;
         }
         else if (!collDown && hasDoubleJump && UpgradeManager.Instance.doubleJump) //perform second jump if double jump unlocked & is in the iar
         {
             rb.velocity = new Vector2(rb.velocity.x, CalculateJumpSpeed(doubleJumpHeight));
             hasDoubleJump = false;
+            coyoteUseable = false;
             AudioManager.Instance.PlaySFX(Sound.Jump);
 
         }
