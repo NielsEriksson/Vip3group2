@@ -10,16 +10,39 @@ public class TileRule : MonoBehaviour
     public Tilemap tilemap;
     public List<RuleTile> ruleTiles = new List<RuleTile>();
     public List<GameObject> decoTilemap = new List<GameObject>();
+    public List<GameObject> backgrounds = new List<GameObject>();
+    List<SpriteRenderer> platforms = new List<SpriteRenderer>();
+
     // Start is called before the first frame update
     void Start()
     {
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Platform"))
+        {
+            platforms.Add(item.GetComponent<SpriteRenderer>());
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!UpgradeManager.Instance.platformTexture)
+        {
+            tilemap.color = Color.black;
+            foreach (SpriteRenderer item in platforms)
+            {
+                item.color = Color.black;
+            }
+        }
+        else
+        {
+            tilemap.color = Color.white;
+            foreach (SpriteRenderer item in platforms)
+            {
+                item.color = Color.white;
+            }
+        }
 
-        //if (Input.GetKeyDown(KeyCode.Space))
         foreach (Vector3Int pos in tilemap.cellBounds.allPositionsWithin)
         {
             if (tilemap.GetTile(pos) != null)
@@ -52,14 +75,26 @@ public class TileRule : MonoBehaviour
 
     void SetDeco(int numSet)
     {
+        if (!UpgradeManager.Instance.backgroundTexture)
+        {
+            foreach (GameObject bg in backgrounds)
+            {
+                bg.SetActive(false);
+            }
+            return;
+        }
+
         for (int i = 0; i < decoTilemap.Count; i++)
         {
             if (i == numSet)
             {
                 decoTilemap[i].SetActive(true);
+                backgrounds[i].SetActive(true);
                 continue;
             }
             decoTilemap[i].SetActive(false);
+            backgrounds[i].SetActive(false);
+
         }
     }
 }

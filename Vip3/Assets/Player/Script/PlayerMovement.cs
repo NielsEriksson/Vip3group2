@@ -137,11 +137,13 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(baseScale.x / 2, baseScale.y / 2, baseScale.z);
             isMinimized = false;
+            AudioManager.Instance.PlaySFX(Sound.Minimize);
         }
         else if (!isMinimized && !collUp)
         {
             transform.localScale = baseScale;
             isMinimized = true;
+            AudioManager.Instance.PlaySFX(Sound.Maximize);
         }
     }
     #endregion

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ShopUI
   - Enemy
+  - ShopObject
+  - Platform
   layers:
   - Default
   - TransparentFX
