@@ -36,6 +36,9 @@ public class PlayerMovement : MonoBehaviour
     //references
     private PlayerControls playerControls; //to read player inputs
 
+    //OnPlatformCheck
+    public bool onPlatform;
+
     private bool CanUseCoyote
     {
         get
@@ -67,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        if (collLeft && moveDirection.x < 0 || collRight && moveDirection.x > 0)
+        if (!onPlatform && (collLeft && moveDirection.x < 0 || collRight && moveDirection.x > 0))
             return;
         float speed = rb.velocity.x;
         if (UpgradeManager.Instance.left && moveDirection.x != 0) // if player has unlocked left movement allow left movement otherwise only move right
@@ -125,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
     public void Jump()
     {
 
-        if ((collLeft && moveDirection.x < 0) || (collRight && moveDirection.x > 0) && !collDown) // wallJump
+        if (!onPlatform && ((collLeft && moveDirection.x < 0) || (collRight && moveDirection.x > 0) && !collDown)) // wallJump
         {
             rb.velocity = new Vector2(-moveDirection.x * wallJumpXSpeed, CalculateJumpSpeed(wallJumpHeight));
         }

@@ -51,6 +51,7 @@ public class MovingPlatform : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.gameObject.transform.parent = platform.transform;
+            collision.gameObject.GetComponent<PlayerMovement>().onPlatform = true;
         }
     }
 
@@ -59,6 +60,8 @@ public class MovingPlatform : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.gameObject.transform.parent = null;
+            collision.gameObject.GetComponent<PlayerMovement>().onPlatform = false;
+
         }
     }
 }
