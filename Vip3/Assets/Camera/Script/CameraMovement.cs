@@ -85,7 +85,7 @@ public class CameraMovement : MonoBehaviour
     }
     public bool ToFollowInYBounds()
     {
-        return toFollow.position.y + camHorizontalExtent <= worldBounds.center.y + worldBounds.extents.y && toFollow.position.y - camHorizontalExtent >= worldBounds.center.y - worldBounds.extents.y;
+        return toFollow.position.y + camVerticalExtent <= worldBounds.center.y + worldBounds.extents.y && toFollow.position.y - camVerticalExtent >= worldBounds.center.y - worldBounds.extents.y;
     }
 
     public void RecenterCamera()
