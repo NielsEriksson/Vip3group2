@@ -23,6 +23,7 @@ public class Interaction : MonoBehaviour
         {
             ShowText();
             playerInRange = true;
+            collision.gameObject.GetComponent<PlayerControls>().onInteraction = onTriggerInteraction;
         }
     }
 
@@ -32,6 +33,7 @@ public class Interaction : MonoBehaviour
         {
             HideText();
             playerInRange = false;
+            collision.gameObject.GetComponent<PlayerControls>().onInteraction = null;
         }
     }
 

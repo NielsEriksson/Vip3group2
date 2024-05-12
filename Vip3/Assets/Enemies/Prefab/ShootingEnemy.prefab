@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4748857106074844051}
   - component: {fileID: 7594940687188165520}
   - component: {fileID: 2094189332430994087}
+  - component: {fileID: 6690129344823994104}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -164,6 +165,27 @@ MonoBehaviour:
   speed: 2
   shootingSpeed: 0.5
   bulletPrefab: {fileID: 7453558255221055528, guid: ce4d85fb1d1be164595efc33d35ad047, type: 3}
+--- !u!95 &6690129344823994104
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005075757458702243}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8f29e7e6ca97714c9857964bdfffa8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3249697740427635746
 GameObject:
   m_ObjectHideFlags: 0

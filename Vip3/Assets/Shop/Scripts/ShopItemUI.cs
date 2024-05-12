@@ -36,7 +36,7 @@ public class ShopItemUI : MonoBehaviour
             PlayerPrefs.SetInt(shopItem.ItemName, 1);
             if(currencyType == "Star") CurrencyManager.Instance.ChangeStarCount(-shopItem.ItemCost);
             else if(currencyType == "Coin") CurrencyManager.Instance.ChangeCoinCount(-shopItem.ItemCost);
-            Destroy(gameObject);
+            if(shopItem.ItemType == ShopItemSO.ItemTypes.Mechanic)Destroy(gameObject);
         }
     }
 }

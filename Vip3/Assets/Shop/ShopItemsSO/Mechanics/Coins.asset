@@ -30,4 +30,5 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   ItemCost: 1
-  ItemIcon: {fileID: 21300000, guid: 40130f0847fc96f45b10ad328c45e425, type: 3}
+  ItemIcon: {fileID: -4986890610287934012, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
+  preRequisite: {fileID: 0}

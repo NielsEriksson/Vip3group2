@@ -52,7 +52,7 @@ public class Collectible : MonoBehaviour
                 case CollectibleType.Star:
                     {
                         CurrencyManager.Instance.ChangeStarCount(1);
-                        AudioManager.Instance.PlaySFX(Sound.PickUp);
+                       // AudioManager.Instance.PlaySFX(Sound.PickUp);
 
                         break;
                     }

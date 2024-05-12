@@ -39,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
     //OnPlatformCheck
     public bool onPlatform;
 
+    //Animation
+    private Animator animator;
+
     private bool CanUseCoyote
     {
         get
@@ -53,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         playerControls = GetComponent<PlayerControls>();
         baseScale = transform.localScale;
+        animator = GetComponent<Animator>();
     }
 
 
@@ -77,17 +81,20 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = Mathf.MoveTowards(speed, maxMoveSpeed * moveDirection.x, acceleration * Time.deltaTime);
             rb.velocity = new Vector2(speed, rb.velocity.y);
+            animator.SetBool("IsRunning", true);
         }
 
         else if (moveDirection.x > 0)
         {
             speed = Mathf.MoveTowards(speed, maxMoveSpeed * 1, acceleration * Time.deltaTime);
             rb.velocity = new Vector2(speed, rb.velocity.y);
+            animator.SetBool("IsRunning", true);
         }
         else if (moveDirection == Vector2.zero) // nothing is being pressed so we stop
         {
             speed = Mathf.MoveTowards(speed, 0, acceleration * Time.deltaTime);
             rb.velocity = new Vector2(speed, rb.velocity.y);
+            animator.SetBool("IsRunning", false);
 
         }
     }
@@ -127,16 +134,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-
+        
         if (!onPlatform && ((collLeft && moveDirection.x < 0) || (collRight && moveDirection.x > 0) && !collDown)) // wallJump
         {
             rb.velocity = new Vector2(-moveDirection.x * wallJumpXSpeed, CalculateJumpSpeed(wallJumpHeight));
+            animator.SetTrigger("Jump");
         }
         if ((collDown || CanUseCoyote) && UpgradeManager.Instance.jump) //jump if unlocked
         {
             rb.velocity = new Vector2(rb.velocity.x, CalculateJumpSpeed(jumpHeight));
-            AudioManager.Instance.PlaySFX(Sound.Jump);
+           // AudioManager.Instance.PlaySFX(Sound.Jump);
             coyoteUseable = false;
+            animator.SetTrigger("Jump");
         }
         else if (!collDown && hasDoubleJump && UpgradeManager.Instance.doubleJump) //perform second jump if double jump unlocked & is in the iar
         {
@@ -144,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
             hasDoubleJump = false;
             coyoteUseable = false;
             AudioManager.Instance.PlaySFX(Sound.Jump);
+            animator.SetTrigger("Jump");
 
         }
     }

@@ -17,7 +17,7 @@ public class PlayerControls : MonoBehaviour
     PlayerMovement playerMovement; //ref to player movement to inform when jump etc has been pressed
 
     // Events
-    [SerializeField] private UnityEvent onInteraction;
+    [SerializeField] public UnityEvent onInteraction;
 
 
     //properties to be used outside of the class
