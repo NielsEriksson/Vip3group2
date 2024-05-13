@@ -11,6 +11,7 @@ public class SceneController : MonoBehaviour
         else if (sceneToLoadName == lastScene){
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.z); //move player close to where it came from
+        CameraMovement.instance.RecenterCamera();
         Death death = FindObjectOfType<Death>();
         death.respawnPoint = transform; //setting respawn point depending on what the previous scene was
         }    
