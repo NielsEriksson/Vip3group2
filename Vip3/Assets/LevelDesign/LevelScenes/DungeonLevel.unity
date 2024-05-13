@@ -23460,6 +23460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneChanger
       objectReference: {fileID: 0}
+    - target: {fileID: 7566529239562753424, guid: 788e42837870bab4683c5187d7118557, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
     - target: {fileID: 8086543787973489977, guid: 788e42837870bab4683c5187d7118557, type: 3}
       propertyPath: sceneToLoadName
       value: RightLevel
