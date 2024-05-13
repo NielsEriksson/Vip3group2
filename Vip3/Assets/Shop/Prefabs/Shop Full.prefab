@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Open shop
+  m_text: Press E to open shop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -610,10 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemsAvailable:
-  - {fileID: 11400000, guid: af9fd9faa365eaf4b9ca0032254b8676, type: 2}
-  - {fileID: 11400000, guid: 7325f4b79728e6043a7565b5d7101e14, type: 2}
-  - {fileID: 11400000, guid: 4148eeb1fb162474895265c635295b0d, type: 2}
-  - {fileID: 11400000, guid: 39ee7698c781ac64f89e49167eac542e, type: 2}
+  - {fileID: 11400000, guid: 57933a923c05e3a4a8a71e9c7ff82c5b, type: 2}
   currentlyAvailableShopItems: {fileID: 11400000, guid: e65592f2f1bd5f84f8db6e37124fbd50, type: 2}
 --- !u!1001 &9186336900418969229
 PrefabInstance:
@@ -623,12 +620,32 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4664021898054163120}
     m_Modifications:
+    - target: {fileID: 211963399008746974, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4986890610287934012, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
     - target: {fileID: 1914584379122710246, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
       propertyPath: m_Name
       value: ShopUI
       objectReference: {fileID: 0}
     - target: {fileID: 1914584379122710246, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295309148871644864, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295309148871644864, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295309148871644864, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 111.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295309148871644864, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4129256861311446533, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
@@ -710,6 +727,14 @@ PrefabInstance:
     - target: {fileID: 4129256861311446533, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512257715615228828, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984542449442760344, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

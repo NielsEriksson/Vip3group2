@@ -15,6 +15,7 @@ public class ShopNPC : MonoBehaviour, IInteractable
   
     public void Interact()
     {
+        Debug.Log(isFirstTimeVisiting);
         if(isFirstTimeVisiting)//If it is the first time visiting this npc the list of new upgrades is comapred to the list of already unlocked 
         {
             foreach (ShopItemSO item in ItemsAvailable)
@@ -23,9 +24,11 @@ public class ShopNPC : MonoBehaviour, IInteractable
                 //This check is done incase we reload a new scene each time the player gets to a new room as the bool isFirstTimeVisiting would reset but not the currentlyUnlockedShopItems SO list
                 if(currentlyAvailableShopItems.items.Count!=0 && currentlyAvailableShopItems.items.Contains(item)) {continue; }
                 //If it gets to this point it means the Upgrade from this npc is completely new and should be added to the currentlyUnlockedShopItems
+                Debug.Log(item);
                 currentlyAvailableShopItems.items.Add(item);
             }
             ShopUIManager.Instance.LoadAndOpenShopUI();
+            isFirstTimeVisiting = false;
         }
         else ShopUIManager.Instance.OpenShopUI();
     }

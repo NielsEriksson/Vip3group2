@@ -11,6 +11,7 @@ public class Death : MonoBehaviour
     public virtual void Start()
     {
         playerPos = GameObject.FindWithTag("Player").transform;
+        respawnPoint = GameObject.FindWithTag("Respawn").transform;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
