@@ -656,6 +656,10 @@ PrefabInstance:
       value: UpgradeManager
       objectReference: {fileID: 0}
     - target: {fileID: 8060589265953843373, guid: cf6bb13d4774b494c84fb7ec4d69eba2, type: 3}
+      propertyPath: sfx
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060589265953843373, guid: cf6bb13d4774b494c84fb7ec4d69eba2, type: 3}
       propertyPath: jump
       value: 1
       objectReference: {fileID: 0}
@@ -665,6 +669,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8060589265953843373, guid: cf6bb13d4774b494c84fb7ec4d69eba2, type: 3}
       propertyPath: coins
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060589265953843373, guid: cf6bb13d4774b494c84fb7ec4d69eba2, type: 3}
+      propertyPath: music
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8060589265953843373, guid: cf6bb13d4774b494c84fb7ec4d69eba2, type: 3}
@@ -691,6 +699,10 @@ PrefabInstance:
     - target: {fileID: 190363953290766119, guid: 9b6977ac4acffb54db08352073ea7131, type: 3}
       propertyPath: m_Name
       value: CoinCollectible
+      objectReference: {fileID: 0}
+    - target: {fileID: 190363953290766119, guid: 9b6977ac4acffb54db08352073ea7131, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2477645023164461544, guid: 9b6977ac4acffb54db08352073ea7131, type: 3}
       propertyPath: m_LocalPosition.x
@@ -732,6 +744,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6022866092505369447, guid: 9b6977ac4acffb54db08352073ea7131, type: 3}
+      propertyPath: type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -748,6 +764,10 @@ PrefabInstance:
     - target: {fileID: 190363953290766119, guid: ee2d0eafa50aa9347af9a7747bde10e4, type: 3}
       propertyPath: m_Name
       value: StarCollectible
+      objectReference: {fileID: 0}
+    - target: {fileID: 190363953290766119, guid: ee2d0eafa50aa9347af9a7747bde10e4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2477645023164461544, guid: ee2d0eafa50aa9347af9a7747bde10e4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1212,6 +1232,10 @@ PrefabInstance:
     - target: {fileID: 7502568621925961066, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502568621925961066, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8037995292691808837, guid: 8d69117ad8fc40745946f2c60b0a44f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2625,6 +2649,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3108628841747300686, guid: 27e5f9689a1894247b849f79269ecfa4, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 9217086075364472366, guid: 867a9a3f879d6b44f8a46d2f7168e3ff, type: 2}
+    - target: {fileID: 3432495228840485887, guid: 27e5f9689a1894247b849f79269ecfa4, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 5935957399946171928, guid: 867a9a3f879d6b44f8a46d2f7168e3ff, type: 2}
     - target: {fileID: 6064650502568675624, guid: 27e5f9689a1894247b849f79269ecfa4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.424804
