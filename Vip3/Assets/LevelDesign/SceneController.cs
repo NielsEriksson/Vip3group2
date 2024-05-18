@@ -29,4 +29,10 @@ public class SceneController : MonoBehaviour
     {
         LoadSavedScene(); //when collided load next scene
     }
+
+    public void LoadNewGame()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(sceneToLoadName);
+    }
 }
