@@ -18,8 +18,12 @@ public class ShootingEnemy : MonoBehaviour
 
     private void Start()
     {
-        bulletSpeed = speed * 3;
-        StartCoroutine(Shoot());
+        if (!UpgradeManager.Instance.enemies) transform.parent.gameObject.SetActive(false);
+        else
+        {
+            bulletSpeed = speed * 3;
+            StartCoroutine(Shoot());
+        }
     }
     private void Update()
     {

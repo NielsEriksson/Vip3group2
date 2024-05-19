@@ -11,6 +11,10 @@ public class MovingEnemy : MonoBehaviour
     int dir = 1;
     public float speed;
 
+    private void Start()
+    {
+        if (!UpgradeManager.Instance.enemies) transform.parent.gameObject.SetActive(false);
+    }
     private void Update()
     {
         Vector2 target = CurrentMovementTarget();

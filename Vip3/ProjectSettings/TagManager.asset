@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - ShopObject
   - Platform
+  - EnemyList
   layers:
   - Default
   - TransparentFX

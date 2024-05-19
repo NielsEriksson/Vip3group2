@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 [CreateAssetMenu(fileName = "UpgradeManagerSO", menuName = "UpgradeManagerSO")]
 public class UpgradeManagerSO : ScriptableObject
@@ -52,6 +53,11 @@ public class UpgradeManagerSO : ScriptableObject
     }
     public void UnlockEnemies()
     {
+       
+        foreach(UnityEngine.Transform child in GameObject.FindWithTag("EnemyList").transform)
+        {
+            child.gameObject.SetActive(true);
+        }
         UpgradeManager.Instance.enemies = true;
     }
     public void UnlockObstacles()

@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6721592797355276249}
   - component: {fileID: 6022866092505369447}
   - component: {fileID: 1660376301820967924}
+  - component: {fileID: 933434201815194225}
   m_Layer: 0
-  m_Name: StarCollectible
+  m_Name: DiamondCollectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 58768f8cb7efee749ab98dfb19047675, type: 3}
+  m_Sprite: {fileID: -1894007544, guid: 888b8be9e1fe88445a7c609281ff6475, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,9 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   starSprites:
-  - {fileID: 21300000, guid: 58768f8cb7efee749ab98dfb19047675, type: 3}
+  - {fileID: 1237992692, guid: 888b8be9e1fe88445a7c609281ff6475, type: 3}
   coinSprites:
-  - {fileID: 21300000, guid: 40130f0847fc96f45b10ad328c45e425, type: 3}
+  - {fileID: -4986890610287934012, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
+  sp: {fileID: 0}
 --- !u!61 &1660376301820967924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,7 +141,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.15, y: 1.15}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -148,3 +150,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &933434201815194225
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190363953290766119}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5aa64b8490f3fd4e885ed1a0d0ea532, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

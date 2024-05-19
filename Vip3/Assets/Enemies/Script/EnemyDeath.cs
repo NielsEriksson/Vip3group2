@@ -10,7 +10,7 @@ public class EnemyDeath : Death
         Vector2 direction = collision.GetContact(0).normal;
         // see if the obect is futher left/right or up down
        
-        if (direction.y <= -0.8f)
+        if (direction.y <= -0.8f && UpgradeManager.Instance.combat)
         {
             SpawnCoin();
             Destroy(gameObject);
