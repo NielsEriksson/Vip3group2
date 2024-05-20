@@ -35,6 +35,11 @@ public class ShopUIManager : MonoBehaviour
         CreateAllShopItemsObjects();
         ShopUIObject.SetActive(true);
     }
+    public void ReloadShop()
+    {
+        ClearShopItemsObjects();
+        CreateAllShopItemsObjects();
+    }
 
     private void ClearShopItemsObjects()//Deletes all existing Shop Item UI objects
     {
