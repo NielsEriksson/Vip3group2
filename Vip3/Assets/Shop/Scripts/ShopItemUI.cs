@@ -31,12 +31,11 @@ public class ShopItemUI : MonoBehaviour
 
         if (CurrencyManager.Instance.CanAfford(shopItem.ItemCost, currencyType))//checks if player can afford it and invokes the shop item event if they can
         {
-            
             shopItem.ItemEvent.Invoke();
             PlayerPrefs.SetInt(shopItem.ItemName, 1);
             if(currencyType == "Star") CurrencyManager.Instance.ChangeStarCount(-shopItem.ItemCost);
             else if(currencyType == "Coin") CurrencyManager.Instance.ChangeCoinCount(-shopItem.ItemCost);
-            if(shopItem.ItemType == ShopItemSO.ItemTypes.Mechanic)Destroy(gameObject);
+            if(!shopItem.multiPurchase) Destroy(gameObject);
         }
     }
 }

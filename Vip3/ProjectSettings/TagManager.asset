@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - ShopObject
   - Platform
+  - EnemyList
+  - PlayerKey
   layers:
   - Default
   - TransparentFX
