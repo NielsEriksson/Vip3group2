@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 61887344}
   - component: {fileID: 61887346}
   - component: {fileID: 61887345}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundTilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
