@@ -2678,6 +2678,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4334741680657298821, guid: eacc75f73b8eda740b33e5d7fb756af5, type: 3}
+      propertyPath: worldBounds.m_Center.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334741680657298821, guid: eacc75f73b8eda740b33e5d7fb756af5, type: 3}
+      propertyPath: worldBounds.m_Extent.x
+      value: 20.6
+      objectReference: {fileID: 0}
     - target: {fileID: 7242526427253916396, guid: eacc75f73b8eda740b33e5d7fb756af5, type: 3}
       propertyPath: m_Name
       value: Main Camera
