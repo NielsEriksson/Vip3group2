@@ -16,12 +16,16 @@ public class CameraMovement : MonoBehaviour
     private float camHorizontalExtent;
     private float camVerticalExtent;
 
-    private void Start()
+    private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
             instance = this;
         else
             Destroy(this.gameObject);
+    }
+
+    private void Start()
+    {
 
         toFollow = GameObject.FindWithTag("Player").transform;
         camHorizontalExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
