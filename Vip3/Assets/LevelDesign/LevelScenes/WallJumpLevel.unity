@@ -6573,7 +6573,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
       propertyPath: ItemsAvailable.Array.size
-      value: 5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
       propertyPath: ItemsAvailable.Array.data[0]
@@ -6598,7 +6598,31 @@ PrefabInstance:
     - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
       propertyPath: ItemsAvailable.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 5fb267b45b189de4b810bf3eaa8b6b69, type: 2}
+      objectReference: {fileID: 11400000, guid: 98de3587fe8aa0745b4aba5bd82497e5, type: 2}
+    - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
+      propertyPath: ItemsAvailable.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7eb77fddd278d934e876bfd210733482, type: 2}
+    - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
+      propertyPath: ItemsAvailable.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: cece34397b4e1ba4db803b68318b6f06, type: 2}
+    - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
+      propertyPath: ItemsAvailable.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: c101353525937a247aaf51a3c32d8d51, type: 2}
+    - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
+      propertyPath: ItemsAvailable.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: b59ff8f3345f2ba40a76b5a2a71d9dda, type: 2}
+    - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
+      propertyPath: ItemsAvailable.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: e57f24fbdd277e94884df62d392073a1, type: 2}
+    - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
+      propertyPath: ItemsAvailable.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4bbe161211b60614ab543843bfe8ceeb, type: 2}
     - target: {fileID: 6288840872629209014, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.51
