@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LevelDesign/LevelScenes/LeftLevel.unity
     guid: 2848c39119305144cb4a709ddf57b4df
+  - enabled: 1
+    path: Assets/LevelDesign/LevelScenes/DungeonLevel.unity
+    guid: 5a2015d70cc887845bda3b318abbbe4e
+  - enabled: 1
+    path: Assets/LevelDesign/LevelScenes/LavaLevel.unity
+    guid: 8711f911f8a711d488d965374f6d0956
+  - enabled: 1
+    path: Assets/LevelDesign/LevelScenes/WallJumpLevel.unity
+    guid: 7b0992dddb16a2943a719df7cbe36a51
   m_configObjects: {}
