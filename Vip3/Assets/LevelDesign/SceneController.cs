@@ -5,6 +5,7 @@ public class SceneController : MonoBehaviour
 {
     [SerializeField] string sceneToLoadName;
     public static string lastScene;
+    public CurrentlyAvailableShopItemsSO itemsSO;
 
     private void Start(){
         if(lastScene == null)return;
@@ -33,6 +34,7 @@ public class SceneController : MonoBehaviour
     public void LoadNewGame()
     {
         PlayerPrefs.DeleteAll();
+        itemsSO.items.Clear();
         SceneManager.LoadScene(sceneToLoadName);
     }
 }
