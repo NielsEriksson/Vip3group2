@@ -3198,6 +3198,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
+      propertyPath: ItemsAvailable.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351270073724367591, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
+      propertyPath: ItemsAvailable.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4148eeb1fb162474895265c635295b0d, type: 2}
     - target: {fileID: 6288840872629209014, guid: 5d3b3e9532c0a7a4db17487efc2bab3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.53
