@@ -6,7 +6,6 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 [CreateAssetMenu(fileName = "UpgradeManagerSO", menuName = "UpgradeManagerSO")]
 public class UpgradeManagerSO : ScriptableObject
 {
-   
     [SerializeField] private List<ShopItemSO> shopItems;
 
     public void Initiate()
@@ -53,7 +52,7 @@ public class UpgradeManagerSO : ScriptableObject
     }
     public void UnlockEnemies()
     {
-       
+        if (GameObject.FindWithTag("EnemyList") == null) return;
         foreach(UnityEngine.Transform child in GameObject.FindWithTag("EnemyList").transform)
         {
             child.gameObject.SetActive(true);
@@ -75,8 +74,24 @@ public class UpgradeManagerSO : ScriptableObject
     {
         UpgradeManager.Instance.sidescroll = true;
     }
-    public void UnlockPlatformTexture()
+    public void UnlockBrightPlatformTexture()
     {
+        SpriteChangeManager.Instance.spriteState = SpriteState.Bright;
+        UpgradeManager.Instance.platformTexture = true;
+    }
+    public void UnlockDarkPlatformTexture()
+    {
+        SpriteChangeManager.Instance.spriteState = SpriteState.Dark;
+        UpgradeManager.Instance.platformTexture = true;
+    }
+    public void UnlockNightPlatformTexture()
+    {
+        SpriteChangeManager.Instance.spriteState = SpriteState.Night;
+        UpgradeManager.Instance.platformTexture = true;
+    }
+    public void UnlockSpookyPlatformTexture()
+    {
+        SpriteChangeManager.Instance.spriteState = SpriteState.Spooky;
         UpgradeManager.Instance.platformTexture = true;
     }
     public void UnlockMusic()
