@@ -94,6 +94,8 @@ public class CameraMovement : MonoBehaviour
 
     public void RecenterCamera()
     {
+        if (toFollow == null)
+            return;
         transform.position = new Vector3(toFollow.position.x, toFollow.position.y, transform.position.z);
         float x = transform.position.x > worldBounds.center.x ? worldBounds.center.x + worldBounds.extents.x - camHorizontalExtent : worldBounds.center.x - worldBounds.extents.x + camHorizontalExtent;
         float y = transform.position.y > worldBounds.center.y ? worldBounds.center.y + worldBounds.extents.y - camVerticalExtent : worldBounds.center.y - worldBounds.extents.y + camVerticalExtent;
