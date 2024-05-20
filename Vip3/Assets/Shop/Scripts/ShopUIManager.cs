@@ -54,7 +54,7 @@ public class ShopUIManager : MonoBehaviour
         {
             //Checks if the players has previously purchased the upgrade through playerprefs,
             //as the currentlyUnlockedShopItems SO List would reset when the game is closed and reopened but not the player prefs
-            if (item.ItemType == ShopItemSO.ItemTypes.Mechanic&&item.CheckPlayerPrefItem()) { continue; }
+            if (item.CheckPlayerPrefItem()&&!item.multiPurchase) { continue; }
             if(item.CheckPrerequisite()==false) { continue; }
             if (item.ItemType == ShopItemSO.ItemTypes.Mechanic)//checks which type of upgrade it is and sets it to the according tab
             {
