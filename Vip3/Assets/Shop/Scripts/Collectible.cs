@@ -7,7 +7,7 @@ public class Collectible : MonoBehaviour
 {
     public enum CollectibleType
     {
-        Star,
+        Diamond,
         Coin
     }
     [SerializeField] public CollectibleType type;
@@ -27,7 +27,7 @@ public class Collectible : MonoBehaviour
     {
         switch (type)
         {
-            case CollectibleType.Star:
+            case CollectibleType.Diamond:
                 {
                     sp.sprite = starSprites[starSpriteIndex];
                     break;
@@ -49,10 +49,10 @@ public class Collectible : MonoBehaviour
         {
             switch (type)
             {
-                case CollectibleType.Star:
+                case CollectibleType.Diamond:
                     {
                         CurrencyManager.Instance.ChangeStarCount(1);
-                       // AudioManager.Instance.PlaySFX(Sound.PickUp);
+                        AudioManager.Instance.PlaySFX(Sound.PickUp);
 
                         break;
                     }

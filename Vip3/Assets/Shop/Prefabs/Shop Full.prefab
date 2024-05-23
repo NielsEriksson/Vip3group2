@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd078c4c6c25a24abdc42beea56e253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starCountTxt: {fileID: 2593058334805402862}
+  diamondCountTxt: {fileID: 2593058334805402862}
   coinCountTxt: {fileID: 8528065939157889668}
   coinDisplay: {fileID: 7245761787141677467}
   allCollectibles: []
@@ -624,6 +624,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4986890610287934012, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
+    - target: {fileID: 1470293659459522663, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
+      propertyPath: m_Name
+      value: DiamondAmount
+      objectReference: {fileID: 0}
     - target: {fileID: 1914584379122710246, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
       propertyPath: m_Name
       value: ShopUI
@@ -739,6 +743,10 @@ PrefabInstance:
     - target: {fileID: 4129256861311446533, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063339128096371444, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
+      propertyPath: m_Name
+      value: Diamond
       objectReference: {fileID: 0}
     - target: {fileID: 5512257715615228828, guid: 26aed2f644c44ad49a9d3052662fe9d2, type: 3}
       propertyPath: m_Padding.m_Left

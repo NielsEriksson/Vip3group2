@@ -25,7 +25,7 @@ public class ShopItemUI : MonoBehaviour
     public void PurchaseUpgrade()
     {
         string currencyType;
-        if (shopItem.ItemType == ShopItemSO.ItemTypes.Mechanic) currencyType = "Star";
+        if (shopItem.ItemType == ShopItemSO.ItemTypes.Mechanic) currencyType = "Diamond";
         else currencyType = "Coin";//Set currency type string depending on upgrade type
 
 

@@ -5,10 +5,10 @@ using TMPro;
 public class CurrencyManager : MonoBehaviour
 {
     public static CurrencyManager Instance;
-    [HideInInspector] public int starCount { get; private set; }
+    [HideInInspector] public int diamondCount { get; private set; }
     [HideInInspector] public int coinCount { get; private set; }
 
-    public TMP_Text starCountTxt;
+    public TMP_Text diamondCountTxt;
     public TMP_Text coinCountTxt;
 
     public GameObject coinDisplay;
@@ -29,26 +29,26 @@ public class CurrencyManager : MonoBehaviour
     }
     public void Start()
     {
-        starCount = PlayerPrefs.GetInt("StarCount", 0);
+        diamondCount = PlayerPrefs.GetInt("DiamonCount", 1);
         coinCount = PlayerPrefs.GetInt("CoinCount", 0);
-        starCountTxt.text = ": " + starCount.ToString();
+        diamondCountTxt.text = ": " + diamondCount.ToString();
         coinCountTxt.text = ": " + coinCount.ToString();
         if(!UpgradeManager.Instance.coins){coinDisplay.SetActive(false);}
     }
 
     public bool CanAfford(int price, string currencyType) //send in either "Star" or "Coin" as string when using this method
     {
-        if (currencyType == "Star" && starCount - price >= 0) return true;
+        if (currencyType == "Diamond" && diamondCount - price >= 0) return true;
         else if (currencyType == "Coin" && coinCount - price >= 0) return true;
         else return false;
     }
 
     public void ChangeStarCount(int amount)
     {
-        starCount+= amount;
-        PlayerPrefs.SetInt("StarCount", starCount);
-        Debug.Log(starCount);
-        starCountTxt.text = ": " + starCount.ToString();
+        diamondCount+= amount;
+        PlayerPrefs.SetInt("DiamonCount", diamondCount);
+        Debug.Log(diamondCount);
+        diamondCountTxt.text = ": " + diamondCount.ToString();
     }
 
     public void ChangeCoinCount(int amount)
